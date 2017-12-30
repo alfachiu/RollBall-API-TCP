@@ -1,0 +1,15 @@
+E:\Users\Alfa\source\repos\AlfaTeam\RollBall\RollBall-API-TCP\bin\Debug\RollBall-API-TCP.exe.config
+E:\Users\Alfa\source\repos\AlfaTeam\RollBall\RollBall-API-TCP\bin\Debug\RollBall-API-TCP.exe
+E:\Users\Alfa\source\repos\AlfaTeam\RollBall\RollBall-API-TCP\bin\Debug\RollBall-API-TCP.pdb
+E:\Users\Alfa\source\repos\AlfaTeam\RollBall\RollBall-API-TCP\bin\Debug\Hprose.dll
+E:\Users\Alfa\source\repos\AlfaTeam\RollBall\RollBall-API-TCP\obj\Debug\RollBall-API-TCP.csprojResolveAssemblyReference.cache
+E:\Users\Alfa\source\repos\AlfaTeam\RollBall\RollBall-API-TCP\obj\Debug\RollBall-API-TCP.csproj.CoreCompileInputs.cache
+E:\Users\Alfa\source\repos\AlfaTeam\RollBall\RollBall-API-TCP\obj\Debug\RollBall-API-TCP.exe
+E:\Users\Alfa\source\repos\AlfaTeam\RollBall\RollBall-API-TCP\obj\Debug\RollBall-API-TCP.pdb
+E:\Users\Alfa\Documents\GitHub\RollBall-API-TCP\bin\Debug\RollBall-API-TCP.exe.config
+E:\Users\Alfa\Documents\GitHub\RollBall-API-TCP\bin\Debug\RollBall-API-TCP.exe
+E:\Users\Alfa\Documents\GitHub\RollBall-API-TCP\bin\Debug\RollBall-API-TCP.pdb
+E:\Users\Alfa\Documents\GitHub\RollBall-API-TCP\obj\Debug\RollBall-API-TCP.csprojResolveAssemblyReference.cache
+E:\Users\Alfa\Documents\GitHub\RollBall-API-TCP\obj\Debug\RollBall-API-TCP.csproj.CoreCompileInputs.cache
+E:\Users\Alfa\Documents\GitHub\RollBall-API-TCP\obj\Debug\RollBall-API-TCP.exe
+E:\Users\Alfa\Documents\GitHub\RollBall-API-TCP\obj\Debug\RollBall-API-TCP.pdb
