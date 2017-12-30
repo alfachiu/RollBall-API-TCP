@@ -1,2 +1,2 @@
 # RollBall-API-TCP
-SanFang RollBall Game API of TCP
+SanFung RollBall Game API by TCP
