@@ -186,7 +186,7 @@ namespace RollBall_API_TCP
     {
         private static void Main(string[] args)
         {
-            string server_ip = "122.117.26.237";    // *服務器地址，請連絡服務器管理員取得正確值。
+            string server_ip = "127.0.0.1";         // *服務器地址，請連絡服務器管理員取得正確值。
             string server_port = "5288";            // *服務器端口，請連絡服務器管理員取得正確值。
             HproseClient _tcp = HproseClient.Create($"tcp://{server_ip}:{server_port}");
             // 函式登錄
