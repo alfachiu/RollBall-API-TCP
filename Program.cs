@@ -190,7 +190,7 @@ namespace RollBall_API_TCP
     {
         private static void Main(string[] args)
         {
-            string server_ip = "192.168.1.100";     // *服務器地址，請連絡服務器管理員取得正確值。
+            string server_ip = "122.117.26.237";    // *服務器地址，請連絡服務器管理員取得正確值。
             string server_port = "5288";            // *服務器端口，請連絡服務器管理員取得正確值。
             HproseClient _tcp = HproseClient.Create($"tcp://{server_ip}:{server_port}");
             // 函式登錄
@@ -207,7 +207,7 @@ namespace RollBall_API_TCP
             Console.WriteLine("[TCP Client]");
             for (int i = 0; i < 10; i++)
             {
-                Console.WriteLine($"{i.ToString()}.");
+                Console.WriteLine("");
                 Console.WriteLine($"Hello: { hello.Hello("World")} {i.ToString()}");
                 Console.WriteLine($"Verify: {verify.Verify(new string[] { "114.35.45.13", "admin@52farfar.com", "阿管先生", "發財公司", "我在珠海市" })}");
                 Console.WriteLine($"ReadStateOfEnable: {string.Join(", ", readStateOfEnable.ReadStateOfEnable(empty))}");
