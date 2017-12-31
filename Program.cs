@@ -3,16 +3,18 @@ using System.Threading;
 using Hprose.Client;
 
 /// <summary>
-/// 滾球遊戲 TCP API
+/// 滾球遊戲 API by TCP
 /// Version Date: 2017/12/30 下午 3:32:50
 /// Authored: alfa@52farfar.com
-/// 函式支援各種程式語言 Hprose 官方參考： http://hprose.com/
+/// 函式支援多種程式語言
+/// Hprose 官方參考： http://hprose.com/
 /// 請求服務的間隔時間為： 500~1000ms，最佳建議值為700ms。
 /// 參數值及傳回值全部為字串格式：若值不是單一時為字串陣列。
 /// 註解有星號"*"必須修改才能正確執行。
 /// 撰寫程式前請確認代碼模式：
-/// 1.腳本被動模式：用戶自行撰寫流程代碼。
-/// 2.腳本自動模式：用戶不需要撰寫流程代碼。
+/// 1.腳本被動模式：用戶自行撰寫流程代碼，判斷"(5)讀取操作流程"，操作裝置(8)寫入命令，"(6)讀取答案取得"
+/// 2.腳本自動模式：用戶不需要撰寫流程代碼，只需要判斷"(5)讀取操作流程"，及"(6)讀取答案取得"。。
+/// 詳細用法請參閱以下代碼。
 /// </summary>
 namespace RollBall_API_TCP
 {
@@ -90,7 +92,8 @@ namespace RollBall_API_TCP
     /// </summary>
     /// <return>
     /// 字串[2]
-    /// 1.[0]="100"(備妥)、"101"(滾球)、"102"(答案)，請不要做為程式內流程判斷用。參考：(5)讀取操作流程
+    /// 1.[0]="100"(備妥等待丟球)、"101"(滾球等待答案)、"102"(答案等待撿球)。
+    ///     狀態值可能只短時間出現，請不要做為程式內流程判斷用。參考：(5)讀取操作流程
     /// 2.[1]="True"|"False"，是否忙碌中。
     ///     腳本被動模式：
     ///         若忙碌中執行"(8)寫入命令"將會無效果。參考：(8)寫入命令
@@ -171,6 +174,7 @@ namespace RollBall_API_TCP
     ///          撿球：當"答案取得"後執行撿球。
     ///          強制撿球：當"答案取得"發生"錯誤"後執行強制撿球。注意：發生錯誤時，你應該自行定義答案內容。
     /// 腳本自動模式：不需要執行此任何命令。
+    ///     你只需要判斷"(5)讀取操作流程"，及"(6)讀取答案取得"。
     ///
     /// WriteCommand("1")    // 丟球
     /// WriteCommand("2")    // 撿球
@@ -184,10 +188,11 @@ namespace RollBall_API_TCP
 
     internal class Program
     {
+        private static string server_ip = "127.0.0.1";      // *服務器地址，請連絡服務器管理員取得正確值。
+        private static string server_port = "0000";         // *服務器端口，請連絡服務器管理員取得正確值。
+
         private static void Main(string[] args)
         {
-            string server_ip = "127.0.0.1";         // *服務器地址，請連絡服務器管理員取得正確值。
-            string server_port = "0000";            // *服務器端口，請連絡服務器管理員取得正確值。
             HproseClient _tcp = HproseClient.Create($"tcp://{server_ip}:{server_port}");
             // 函式登錄
             IHello hello = _tcp.UseService<IHello>();
